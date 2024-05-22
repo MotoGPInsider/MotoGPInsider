@@ -1,0 +1,135 @@
+<!-- news.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGPInsider - Notizie</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/CMLQGhW/favicon.jpg/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D2D2D2;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+		span{
+			  text-align: center;
+			  }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+		article {
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			padding: 10px;
+			background-color: #fff;
+		}		
+		#clock {
+			color: #ffffff;
+			position: absolute;
+            top: 139px;			
+			left: 859px;
+			font-size: 50px;
+        }
+    </style>
+	<script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            requestAnimationFrame(updateClock);
+        }
+
+        // Chiamata iniziale per avviare l'orologio
+        updateClock();
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>MotoGPInsider</h1>
+        <p>Tutto sulla MotoGP</p>
+
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="news.html">Notizie</a>
+        <a href="riders.html">Piloti</a>
+        <a href="races.html">Gare</a>
+        <a href="quiz.html">Quiz</a>
+		<a href="fantasy.html">Fantasy MotoGP</a>
+        <a href="fan.html">Fan Zone</a>
+				<div id="clock"></div>
+    </nav>
+
+    <section>
+        <h2>Ultime Notizie</h2>
+        <p>Scopri le ultime novità dalla MotoGP.</p>
+    </section>
+	<article>
+            <h3>"MotoGP 2024. ORARI TV GP Qatar, si riparte su SKY e TV8!"</h3>
+            <p>Data: 04/03/2024</p>
+            <p>"ORARI SKY<br>- Venerdì 8 marzo<br>12-12,35 Moto3 Prove Libere<br>12,50-13,30 Moto2 Prove Libere<br>13,45-14,30 MotoGP Prove Libere<br>16,15-16,50 Moto3 P1<br>17,05-17,45 Moto2 P1<br>18-19 MotoGP Pre qualifiche<br>- Sabato 9 marzo<br>10,30-11 Moto3 P2<br>11,15-11,45 Moto2 P2<br>12-12,30 MotoGP P2<br>12,40-13,20 MotoGP Qualifiche (Q1-Q2)<br>14,50-15,30 Moto3 Qualifiche (Q1-Q2)<br>15,45-16,25 Moto2 Qualifiche (Q1-Q2)<br>17 MotoGP Sprint (11 giri)<br>- Domenica 10 marzo<br>13,40-13,50 MotoGP Warm Up<br>15 Moto3 Gara (16 giri)<br>16,15 Moto2 Gara (18 giri)<br>18 MotoGP Gara (22 giri)<br>ORARI TV8<br>-Sabato 9 marzo (diretta)<br>13,40-14,20 MotoGP Qualifiche (Q1-Q2)<br>15,50-16,30 Moto3 Qualifiche (Q1-Q2)<br>16,45-17,25 Moto2 Qualifiche (Q1-Q2)<br>18 MotoGP Sprint <br>-Domenica 10 marzo (differita)<br>18,45 Moto3 Gara<br>20 Moto2 Gara<br>21,45 MotoGP Gara" </p>
+			</article>
+	<article>
+            <h3>Bagnaia, bagno di folla a Chivasso prima del Qatar: "Daremo subito il massimo"</h3>
+            <p>Data: 03/03/2024</p>
+            <p>Da Pesaro a Chivasso, altro bagno di folla per Francesco Bagnaia a pochi giorni dal via della stagione. Centinaia di fan si sono dati appuntamento per salutare il campione del mondo della MotoGP nella sua città. Il sindaco Claudio Castello ha annunciato che il ducatista sarà presto insignito della cittadinanza onoraria. In sala, nella sede del fan club, sono arrivati tifosi da Francia, Spagna e da diverse regioni d'Italia. "Abbiamo fatto un grande lavoro in queste settimane - ha detto "Pecco" - , la moto di quest'anno la 'sento' bene e sono convinto che daremo subito il massimo". </p>
+        </article>
+		<article>
+            <h3>"MotoGP | piloti all’unisono: "Bagnaia è il favorito al titolo"</h3>
+            <p>Data: 03/03/2024</p>
+            <p>"Pecco Bagnaia è il favorito per la stagione 2024 secondo la maggior parte dei pioloti, a cominciare da Jorge Martín, il suo più grande rivale dello scorso anno. La forma mostrata dall'italiano durante i test invernali ha impressionato molti piloti..." </p>
+        </article>
+		
+	<section>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo-motogp.svg" alt="logo motogp" style="width: 150px; height: auto; position: absolute; top: 150%; left: 44.27%;">
+	<img src="https://i.ibb.co/1LQbQ4z/boooooooooo.jpg" alt="spazio" style="width: 200px; height: auto; position: absolute; top: 165%; left: 44.27%;">
+    </section>		
+
+    <footer>
+	<p>&copy; 2024 MotoGPInsider - Tutti i diritti riservati</p>
+   </footer>
+
+</body>
+</html>

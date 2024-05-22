@@ -1,0 +1,111 @@
+<!-- races.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGPInsider - Gare</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/CMLQGhW/favicon.jpg/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D2D2D2;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+		span{
+			  text-align: center;
+			  }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    #clock {
+			color: #ffffff;
+			position: absolute;
+            top: 139px;			
+			left: 859px;
+			font-size: 50px;
+        }	
+    </style>
+	  <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            requestAnimationFrame(updateClock);
+        }
+
+        // Chiamata iniziale per avviare l'orologio
+        updateClock();
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>MotoGPInsider</h1>
+        <p>Tutto sulla MotoGP</p>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="news.html">Notizie</a>
+        <a href="riders.html">Piloti</a>
+        <a href="races.html">Gare</a>
+        <a href="quiz.html">Quiz</a>
+		<a href="fantasy.html">Fantasy MotoGP</a>
+        <a href="fan.html">Fan Zone</a>
+		<div id="clock"></div>
+    </nav>
+
+    <section><span>
+        <h2>Calendario gare MotoGP</h2>
+        <p>Scopri il calendario PROVVISORIO delle gare della MotoGP.</p>
+		<img src="https://cdn-img.moto.it/images/34183923/1200x/calendario-2024.jpeg" alt="calendario" style="width: 1000px; height: auto; position: absolute; top: 325px; left: 485px;">
+		</span>
+		<img src="https://i.ibb.co/1LQbQ4z/boooooooooo.jpg" alt="spazio" style="width: 200px; height: auto; position: absolute; top: 1100px; left: 810px;">
+    </section>
+
+    <footer>
+   <p>&copy; 2024 MotoGPInsider - Tutti i diritti riservati</p>
+   </footer>
+
+</body>
+</html>

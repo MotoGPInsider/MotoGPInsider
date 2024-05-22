@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGPInsider - Quiz</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/CMLQGhW/favicon.jpg/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D2D2D2;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #quiz-container {
+            background-color: #FFF;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btn {
+            background-color: #555;
+            color: #FFF;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		.btn-selected {
+        background-color: #4285f4; /* Cambia il colore a tuo piacimento */
+        color: #fff;
+    }
+	h2{
+		top: 20px;
+		}
+		h3{
+		font-size: 14px;
+		}
+    #clock {
+			color: #ffffff;
+			position: absolute;
+            top: 139px;			
+			left: 859px;
+			font-size: 50px;
+        }	
+    </style>
+	  <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            requestAnimationFrame(updateClock);
+        }
+
+        // Chiamata iniziale per avviare l'orologio
+        updateClock();
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>MotoGPInsider</h1>
+        <p>Tutto sulla MotoGP</p>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="news.html">Notizie</a>
+        <a href="riders.html">Piloti</a>
+        <a href="races.html">Gare</a>
+        <a href="quiz.html">Quiz</a>
+		<a href="fantasy.html">Fantasy MotoGP</a>
+        <a href="fan.html">Fan Zone</a>
+		<div id="clock"></div>
+    </nav>
+    <section>
+        <div id="quiz-container">
+            <h1>MotoGP Quiz</h1>
+			<h3>(una volta selezionata la risposta sarà definitiva)</h3>
+            <div id="question-container"></div>
+            <div id="answer-buttons" class="btn-container"></div>
+            <h2><button id="next-button" class="btn" onclick="nextQuestion()">Prossima domanda</button></h2>
+        </div>
+    </section>
+    <footer>
+    <p>&copy; 2024 MotoGPInsider - Tutti i diritti riservati</p>
+	</footer>
+    <script src="quiz.js"></script>
+</body>
+</html>

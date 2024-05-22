@@ -1,0 +1,171 @@
+<!-- moto2.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGPInsider - Piloti</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/CMLQGhW/favicon.jpg/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D2D2D2;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+		span{
+			  text-align: center;
+			  }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+		div{
+			background-color: #555;
+            overflow: hidden;
+			}
+		div a{
+			float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 18px;
+            text-decoration: none;
+			}
+        section {
+            padding: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    #clock {
+			background-color: transparent;
+			color: #ffffff;
+			position: absolute;
+            top: 139px;			
+			left: 859px;
+			font-size: 50px;
+        }	
+    </style>
+	  <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            requestAnimationFrame(updateClock);
+        }
+
+        // Chiamata iniziale per avviare l'orologio
+        updateClock();
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>MotoGPInsider</h1>
+        <p>Tutto sulla MotoGP</p>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="news.html">Notizie</a>
+        <a href="riders.html">Piloti</a>
+        <a href="races.html">Gare</a>
+        <a href="quiz.html">Quiz</a>
+		<a href="fantasy.html">Fantasy MotoGP</a>
+        <a href="fan.html">Fan Zone</a>
+		<div id="clock"></div>
+    </nav>
+	<div>
+	<hr>
+		<a href="motogp.html">MotoGP</a>
+        <a href="moto2.html">Moto2</a>
+        <a href="moto3.html">Moto3</a>
+	</div>
+
+    <section>
+        <h2>Piloti Moto2</h2>
+        <p>Scopri i piloti attuali della Moto2.</p>
+    </section>
+	
+	<section>
+		<img src="https://i.ibb.co/gFmps4P/ser-garcia.jpg" alt="s.garcia" style="width: 300px; height: auto; position: absolute; top: 355px; left: 30px;">
+        <img src="https://i.ibb.co/Q682Xqt/ogura.jpg" alt="ogura" style="width: 300px; height: auto; position: absolute; top: 355px; left: 340px;">
+        <img src="https://i.ibb.co/2NdsMpK/masia.jpg" alt="masia" style="width: 300px; height: auto; position: absolute; top: 355px; left: 650px;">
+        <img src="https://i.ibb.co/G7qYyhN/bendsneyder.jpg" alt="bendsneyder" style="width: 300px; height: auto; position: absolute; top: 355px; left: 960px;">
+        <img src="https://i.ibb.co/W0n80Qd/baltus.jpg" alt="baltus" style="width: 300px; height: auto; position: absolute; top: 355px; left: 1270px;">
+        <img src="https://i.ibb.co/D4z3d2S/van-den.jpg" alt="goorberg" style="width: 300px; height: auto; position: absolute; top: 355px; left: 1580px;">
+	</section>
+	<section>
+		<img src="https://i.ibb.co/Bt5mkfw/moreira.jpg" alt="moreira" style="width: 300px; height: auto; position: absolute; top: 655px; left: 30px;">
+        <img src="https://i.ibb.co/WKZT9nK/foggia.jpg" alt="foggia" style="width: 300px; height: auto; position: absolute; top: 655px; left: 340px;">
+        <img src="https://i.ibb.co/n8vJgXZ/escrig.jpg" alt="escrig" style="width: 300px; height: auto; position: absolute; top: 655px; left: 650px;">
+        <img src="https://i.ibb.co/Q8NxVwS/artigas.jpg" alt="artigas" style="width: 300px; height: auto; position: absolute; top: 655px; left: 960px;">
+        <img src="https://i.ibb.co/X5Br4p3/salac.jpg" alt="salac" style="width: 300px; height: auto; position: absolute; top: 655px; left: 1270px;">
+        <img src="https://i.ibb.co/xq7xcpJ/arbolino.jpg" alt="arbolino" style="width: 300px; height: auto; position: absolute; top: 655px; left: 1580px;">
+	</section>
+	<section>
+		<img src="https://i.ibb.co/8McmK1H/vietti.jpg" alt="vietti" style="width: 300px; height: auto; position: absolute; top: 955px; left: 30px;">
+        <img src="https://i.ibb.co/L88ZTNr/oncu.jpg" alt="oncu" style="width: 300px; height: auto; position: absolute; top: 955px; left: 340px;">
+        <img src="https://i.ibb.co/MGHWtmv/binder.jpg" alt="binder" style="width: 300px; height: auto; position: absolute; top: 955px; left: 650px;">
+        <img src="https://i.ibb.co/fk4BhCF/agius.jpg" alt="agius" style="width: 300px; height: auto; position: absolute; top: 955px; left: 960px;">
+        <img src="https://i.ibb.co/XkWc2g4/roberts.jpg" alt="roberts" style="width: 300px; height: auto; position: absolute; top: 955px; left: 1270px;">
+        <img src="https://i.ibb.co/s3QhWGh/ramirez.jpg" alt="ramirez" style="width: 300px; height: auto; position: absolute; top: 955px; left: 1580px;">
+	</section>
+	<section>
+		<img src="https://i.ibb.co/VB9SPSJ/gonzalez.jpg" alt="gonzalez" style="width: 300px; height: auto; position: absolute; top: 1255px; left: 30px;">
+        <img src="https://i.ibb.co/FK2zCLC/arenas.jpg" alt="arenas" style="width: 300px; height: auto; position: absolute; top: 1255px; left: 340px;">
+        <img src="https://i.ibb.co/x2dpCS4/cardelus.jpg" alt="cardelus" style="width: 300px; height: auto; position: absolute; top: 1255px; left: 650px;">
+        <img src="https://i.ibb.co/58gJmB7/canet.jpg" alt="canet" style="width: 300px; height: auto; position: absolute; top: 1255px; left: 960px;">
+        <img src="https://i.ibb.co/nLMNMDT/lopez.jpg" alt="lopez" style="width: 300px; height: auto; position: absolute; top: 1255px; left: 1270px;">
+        <img src="https://i.ibb.co/2qVxC05/aldeguer.jpg" alt="aldeguer" style="width: 300px; height: auto; position: absolute; top: 1255px; left: 1580px;">
+	</section>
+	<section>
+		<img src="https://i.ibb.co/WHnpjsB/sasaki.jpg" alt="sasaki" style="width: 300px; height: auto; position: absolute; top: 1555px; left: 30px;">
+        <img src="https://i.ibb.co/b5ggRDp/alcoba.jpg" alt="alcoba" style="width: 300px; height: auto; position: absolute; top: 1555px; left: 340px;">
+        <img src="https://i.ibb.co/FVYN9wq/guevara.jpg" alt="guevara" style="width: 300px; height: auto; position: absolute; top: 1555px; left: 650px;">
+        <img src="https://i.ibb.co/CWMKr13/dixon.jpg" alt="dixon" style="width: 300px; height: auto; position: absolute; top: 1555px; left: 960px;">
+        <img src="https://i.ibb.co/Qckz4Ft/aji.jpg" alt="aji" style="width: 300px; height: auto; position: absolute; top: 1555px; left: 1270px;">
+        <img src="https://i.ibb.co/xf3F2PB/chantra.jpg" alt="chantra" style="width: 300px; height: auto; position: absolute; top: 1555px; left: 1580px;">
+	</section>
+	<section>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Logo-motogp.svg" alt="logo motogp" style="width: 200px; height: auto; position: absolute; top: 1850px; left: 850px;">
+        <img src="https://i.ibb.co/1LQbQ4z/boooooooooo.jpg" alt="spazio" style="width: 200px; height: auto; position: absolute; top: 2100px; left: 810px;">
+    </section>
+    <footer>
+        <p>&copy; 2024 MotoGPInsider - Tutti i diritti riservati</p>
+		</footer>
+
+</body>
+</html>

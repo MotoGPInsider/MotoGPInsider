@@ -1,0 +1,272 @@
+<!-- fantasy.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGPInsider</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/CMLQGhW/favicon.jpg/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D2D2D2 ;
+			overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+		span{
+			  text-align: center;
+			  }
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+		position: relative;
+            padding: 20px;
+			top: -110px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+		#clock {
+			color: #ffffff;
+			position: absolute;
+            top: 139px;			
+			left: 859px;
+			font-size: 50px;
+        }
+		main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 90px;
+}
+
+section {
+    width: 45%;
+}
+
+button {
+    display: block;
+    margin-bottom: 5px;
+}
+#selected-pilots {
+	  flex: 1;
+	  text-align: center;
+}
+#selected-pilots-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+#selected-pilots-list li {
+    width: 25%; /* Imposta larghezza del 25% per ciascun elemento */
+    text-align: center;
+    padding: 10px;
+	overflow: hidden;
+}
+#constructor-select{
+top: -785px;
+left:300px;
+overflow: hidden;
+}
+#selected-constructor-photo{
+left:1000px;
+top:-700px;
+overflow: hidden;
+}
+#squad-select{
+top: -1273px;
+left:650px;
+position: absolute,
+}
+#selected-squad-image{
+left:1400px;
+top:-1375px;
+
+}
+
+.yamaha {
+    background-color: blue;
+    color: white;
+	white-space: nowrap;
+}
+
+.ducati {
+    background-color: red;
+    color: white;
+}
+
+.honda {
+    background-color: orange;
+    color: white;
+}
+.aprilia {
+    background-color: green;
+    color: white;
+}
+.gresini {
+    background-color: gray;
+    color: white;
+}
+.prima {
+    background-color: purple;
+    color: white;
+}
+.ktm {
+    background-color: orangered;
+    color: white;
+}
+.vr46 {
+    background-color: gold;
+    color: white;
+	white-space: nowrap;
+}
+.gasgas {
+    background-color: firebrick;
+    color: white;
+	white-space: nowrap;
+}
+.lcr {
+    background-color: silver;
+    color: white;
+}
+.trackhouse {
+    background-color: darkturquoise;
+    color: white;
+	white-space: nowrap;
+}
+.trackhouse {
+    background-color: darkturquoise;
+    color: white;
+}
+span{
+position: absolute;
+}
+
+
+    </style>
+	  <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            requestAnimationFrame(updateClock);
+        }
+
+        // Chiamata iniziale per avviare l'orologio
+        updateClock();
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <h1>MotoGPInsider</h1>
+        <p>Tutto sulla MotoGP</p>	
+		
+    </header>
+	<nav>
+         <a href="home.html">Home</a>
+        <a href="news.html">Notizie</a>
+        <a href="riders.html">Piloti</a>
+        <a href="races.html">Gare</a>
+		<a href="quiz.html">Quiz</a>
+		<a href="fantasy.html">Fantasy MotoGP</a>
+        <a href="fan.html">Fan Zone</a>
+		
+		<div id="clock"></div>
+    </nav>
+	<main>
+    <section id="team-selection">
+        <h2>Seleziona 4 piloti:</h2>
+        <div id="pilots-list">
+            <!-- Qui verrà mostrata la lista di tutti i piloti della MotoGP -->
+        </div>
+    </section>
+    <section id="selected-pilots">
+        <h2>Piloti:</h2>
+        <ul id="selected-pilots-list">
+            <!-- Qui verrà mostrato il team selezionato -->
+        </ul>
+    </section>
+   
+    </section>
+</main>
+ <section id="constructor-select">
+        <h2>Seleziona il costruttore:</h2>
+       <div id="constructor-buttons">
+        <button class="constructor-button yamaha" data-image="https://fantasy.motogp.com/media/constructors/3_3.png">Yamaha</button>
+        <button class="constructor-button ducati" data-image="https://fantasy.motogp.com/media/constructors/110_3.png">Ducati</button>
+        <button class="constructor-button honda" data-image="https://fantasy.motogp.com/media/constructors/1_3.png">Honda</button>
+		 <button class="constructor-button aprilia" data-image="https://fantasy.motogp.com/media/constructors/7_3.png">Aprilia</button>
+        <button class="constr-button ktm" data-image="https://fantasy.motogp.com/media/constructors/298_3.png">KTM</button>
+    </div>
+    </section>
+    <section id="selected-constructor-photo">
+         <h2>Costruttore:</h2>
+    <img id="selected-image" src="https://i.ibb.co/JkwddMD/fantasy.jpg" style="width: 220px;">
+    </section>
+	
+	<span>
+
+		<section id="squad-select">
+        <h2>Seleziona il team:</h2>
+       <div id="squad-buttons">
+	   <button class="squad-button gresini" data-image="https://fantasy.motogp.com/media/squads/10_3.png">Gresini Racing</button>
+        <button class="squad-button ducati" data-image="https://fantasy.motogp.com/media/squads/15_3.png">Ducati Lenovo</button>
+        <button class="squad-button prima" data-image="https://fantasy.motogp.com/media/squads/32_3.png">Prima Pramac</button>
+		<button class="squad-button aprilia" data-image="https://fantasy.motogp.com/media/squads/21_3.png">Aprilia Racing</button>
+		<button class="squad-button ktm" data-image="https://fantasy.motogp.com/media/squads/23_3.png">Red Bull KTM</button>
+		<button class="squad-button vr46" data-image="https://fantasy.motogp.com/media/squads/43_3.png">Pertamina Enduro VR46</button>
+		<button class="squad-button gasgas" data-image="https://fantasy.motogp.com/media/squads/11_3.png">Red Bull GASGAS</button>
+		<button class="squad-button lcr" data-image="https://fantasy.motogp.com/media/squads/17_3.png">LCR Honda</button>
+		<button class="squad-button trackhouse" data-image="https://fantasy.motogp.com/media/squads/46_3.png">Trackhouse Racing</button>
+		<button class="squad-button honda" data-image="https://fantasy.motogp.com/media/squads/14_3.png">Repsol Honda</button>
+		<button class="squad-button yamaha" data-image="https://fantasy.motogp.com/media/squads/19_3.png">Yamaha Monster Energy</button>      
+    </span>
+    </section>
+    <section id="selected-squad-image">
+         <h2>Team:</h2>
+    <img id="team-image" src="https://i.ibb.co/JkwddMD/fantasy.jpg" style="width: 220px;">
+    </section>
+	</div>
+
+    <footer>
+         <p>&copy; 2024 MotoGPInsider - Tutti i diritti riservati</p>
+    </footer>
+    <script src="fantasy.js"></script>
+</body>
+</html>

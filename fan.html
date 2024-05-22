@@ -1,0 +1,167 @@
+<!-- fan.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGPInsider - Notizie</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/CMLQGhW/favicon.jpg/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D2D2D2;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+		div{
+		position: absolute;
+			font-size: 22px;
+			left: 20%;
+        }
+		span{
+			  left: 70%;
+			  position: absolute;
+			font-size: 22px;
+			  }
+			  b{
+			  font-size: 26px;
+			  }
+			  h2{
+			  text-align: center;
+			   font-size: 26px;
+			  }
+
+    #clock {
+			color: #ffffff;
+			position: absolute;
+            top: 139px;			
+			left: 859px;
+			font-size: 50px;
+        }	
+    </style>
+	  <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            requestAnimationFrame(updateClock);
+        }
+
+        // Chiamata iniziale per avviare l'orologio
+        updateClock();
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>MotoGPInsider</h1>
+        <p>Tutto sulla MotoGP</p>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="news.html">Notizie</a>
+        <a href="riders.html">Piloti</a>
+        <a href="races.html">Gare</a>
+        <a href="quiz.html">Quiz</a>
+		<a href="fantasy.html">Fantasy MotoGP</a>
+        <a href="fan.html">Fan Zone</a>
+		<div id="clock"></div>
+    </nav>
+
+    <section>
+        <h2>Fan Zone MotoGP</h2>
+        <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MotoGP UFFICIALE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sky Sport MotoGP</b></p>	
+    </section>
+	
+	<section>
+	
+		 <ul>
+		 <div>
+		 
+        <li><a href="https://www.instagram.com/motogp/" target="_blank">Instagram MotoGP</a></li>
+		<br><br><br>
+        <li><a href="https://www.facebook.com/MotoGP/?locale=it_IT" target="_blank">Facebook MotoGP</a></li>
+		<br><br><br>
+		<li><a href="https://twitter.com/MotoGP" target="_blank">X MotoGP</a></li>
+		<br><br><br>
+		<li><a href="https://www.tiktok.com/@motogp" target="_blank">TikTok MotoGP</a></li>	
+		<br><br><br>
+		<li><a href="https://www.youtube.com/@motogp" target="_blank">YouTube MotoGP</a></li>	
+		
+		
+		</div>
+		<span>
+		<li><a href="https://www.instagram.com/skysportmotogp/" target="_blank">Instagram Sky Sport MotoGP</a></li>
+		<br><br><br>
+        <li><a href="https://www.facebook.com/SkySportMotoGP?paipv=0&eav=AfazQwhAJFPOqg3qSjG_Ng3lRDO8mNCc9axBru7EuiW2AYztqgwroeCgX0gDn5_pRnE" target="_blank">Facebook Sky Sport MotoGP</a></li>
+		<br><br><br>
+		<li><a href="https://twitter.com/SkySportMotoGP" target="_blank">X Sky Sport MotoGP</a></li>
+		<br><br><br>
+		<li><a href="https://www.tiktok.com/@skysportmotogp" target="_blank">TikTok Sky Sport MotoGP</a></li>	
+		<br><br><br>
+		<li><a href="https://www.youtube.com/@skysportmotogp" target="_blank">YouTube Sky Sport MotoGP</a></li>	
+		</span>
+			</ul>
+			
+		   	</section>
+		<a href="https://www.instagram.com/motogp/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="logo insta" style="width: 70px; height: auto; position: absolute; top: 38.5%; left: 16%;"></a>
+		<a href="https://www.facebook.com/MotoGP/?locale=it_IT" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="logo facebook" style="width: 70px; height: auto; position: absolute; top: 49%; left: 16%;"></a>
+		<a href="https://twitter.com/MotoGP" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="logo x" style="width: 70px; height: auto; position: absolute; top: 60.5%; left: 16%;"></a>
+		<a href="https://www.tiktok.com/@motogp" target="_blank"><img src="https://cdn.icon-icons.com/icons2/2972/PNG/512/tiktok_logo_icon_186896.png" alt="logo TIKTOK" style="width: 73px; height: auto; position: absolute; top: 71%; left: 16%;"></a>
+		<a href="https://www.youtube.com/@motogp" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="logo yt" style="width: 70px; height: auto; position: absolute; top: 83.5%; left: 16%;"></a>
+ 
+		<a href="https://www.instagram.com/skysportmotogp/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="logo insta" style="width: 70px; height: auto; position: absolute; top: 38.5%; left: 66%;"></a>
+		<a href="https://www.facebook.com/SkySportMotoGP?paipv=0&eav=AfazQwhAJFPOqg3qSjG_Ng3lRDO8mNCc9axBru7EuiW2AYztqgwroeCgX0gDn5_pRnE" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="logo facebook" style="width: 70px; height: auto; position: absolute; top: 49%; left: 66%;"></a>
+		<a href="https://twitter.com/SkySportMotoGP" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="logo x" style="width: 70px; height: auto; position: absolute; top: 60.5%; left: 66%;"></a>
+		<a href="https://www.tiktok.com/@skysportmotogp" target="_blank"><img src="https://cdn.icon-icons.com/icons2/2972/PNG/512/tiktok_logo_icon_186896.png" alt="logo tiktok" style="width: 73px; height: auto; position: absolute; top: 71%; left: 66%;"></a>
+		<a href="https://www.youtube.com/@skysportmotogp" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="logo yt" style="width: 70px; height: auto; position: absolute; top: 83.5%; left: 66%;"></a>
+
+		<footer>
+       <p>&copy; 2024 MotoGPInsider - Tutti i diritti riservati</p>
+	   </footer>
+
+</body>
+</html>
